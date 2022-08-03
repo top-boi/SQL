@@ -1,0 +1,33 @@
+--creating an ice cream store database
+
+CREATE TABLE ice_cream (ID INTEGER PRIMARY KEY, flavor TEXT, Calories_per_serving INTEGER, price_per_pound INTEGER, popularity INTEGER);
+INSERT INTO ice_cream VALUES (1, 'Vanilla', 285, 1.70, 9);
+INSERT INTO ice_cream VALUES (2, 'Chocolate', 315, 1.70, 10);
+INSERT INTO ice_cream VALUES (3, 'Strawberry', 300, 1.70, 7);
+INSERT INTO ice_cream VALUES (4, 'Mint', 300, 1.70, 5);
+INSERT INTO ice_cream VALUES (5, 'Birthday Cake', 410, 1.80, 10);
+INSERT INTO ice_cream VALUES (6, 'Neopolitan', 350, 1.80, 9);
+INSERT INTO ice_cream VALUES (7, 'Fudge', 330, 1.70, 7);
+INSERT INTO ice_cream VALUES (8, 'Reeses', 375, 2.00, 8);
+INSERT INTO ice_cream VALUES (9, 'Butterfinger', 375, 2.00, 6);
+INSERT INTO ice_cream VALUES (10, 'Heath', 290, 2.00, 5);
+INSERT INTO ice_cream VALUES (11, 'Cappucino', 315, 2.00, 4);
+INSERT INTO ice_cream VALUES (12, 'Coconut', 290, 1.70, 2);
+INSERT INTO ice_cream VALUES (13, 'Cheesecake', 325, 2.00, 6);
+INSERT INTO ice_cream VALUES (14, 'Banana', 290, 1.70, 7);
+INSERT INTO ice_cream VALUES (15, 'Creampie', 310, 2.00, 4);
+
+--ordering flavor by price
+
+SELECT * FROM ice_cream ORDER BY price_per_pound;
+
+--getting total cost of order
+
+SELECT TOTAl (price_per_pound) FROM ice_cream;
+
+--what are the top 5 least popular flavors?
+
+SELECT flavor, price_per_pound, popularity FROM ice_cream ORDER BY popularity limit 5;
+
+
+

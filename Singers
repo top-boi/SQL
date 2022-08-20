@@ -1,0 +1,33 @@
+
+CREATE TABLE singer (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, band TEXT, age INTEGER);
+
+INSERT INTO singer (name, band, age) VALUES ("Dylan Mattheisen", "Tiny Moving Parts", 26);
+INSERT INTO singer (name, band, age) VALUES ("Tades Sanville", "Hot Mulligan", 25);
+INSERT INTO singer (name, band, age) VALUES ("Joey Fleming", "In Her OWn Words", 31);
+INSERT INTO singer (name, band, age) VALUES ("Sloan Struble", "Dayglow", 23);
+INSERT INTO singer (name, band, age) VALUES ("Patrick Miranda", "Movements", 27);
+
+CREATE TABLE title (id INTEGER PRIMARY KEY AUTOINCREMENT, title_id INTEGER, title TEXT, genre TEXT, year_released INTEGER);
+
+INSERT INTO title (title_id, title, "genre", year_released) VALUES (1, "Birdhouse", "Math Rock", 2016);
+INSERT INTO title (title_id, title, "genre", year_released) VALUES (1, "Whale Watching", "Math Rock", 2018);
+INSERT INTO title (title_id, title, "genre", year_released) VALUES (2, "BCKYRD", "Punk", 2020);
+INSERT INTO title (title_id, title, "genre", year_released) VALUES (2, "Pop Shuvit", "Punk", 2021);
+INSERT INTO title (title_id, title, "genre", year_released) VALUES (3, "Silver Lights", "Pop Punk", 2017);
+INSERT INTO title (title_id, title, "genre", year_released) VALUES (3, "Alone With You", "Pop Punk", 2019);
+INSERT INTO title (title_id, title, "genre", year_released) VALUES (4, "Nicknames", "Indie", 2019);
+INSERT INTO title (title_id, title, "genre", year_released) VALUES (4, "False Direction", "Indie", 2021);
+INSERT INTO title (title_id, title, "genre", year_released) VALUES (5, "Full Circle", "Post Hardcore", 2017);
+INSERT INTO title (title_id, title, "genre", year_released) VALUES (5, "Daylily", "Post Hardcore", 2017);
+
+
+SELECT s.name, t.genre FROM singer s LEFT OUTER JOIN title t ON s.id=t.title_id GROUP BY name;
+
+SELECT s.name, t.title, t.year_released FROM singer s LEFT OUTER JOIN title t ON s.id=t.title_id;
+
+SELECT s.band, t.title, t.genre, t.year_released FROM title t LEFT OUTER JOIN singer s WHERE s.id=t.title_id ORDER BY year_released ASC;
+
+
+
+
+

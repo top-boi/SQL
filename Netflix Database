@@ -18,6 +18,7 @@ WHERE type='Movie';
 SELECT MAX(date(date_added))
 FROM "CharlotteChaze/BreakIntoTech"."netflix_titles_info";
 
+
 --List all movies and tv shows in alphabetical order.
 
 SELECT title

@@ -11,7 +11,7 @@ INSERT INTO ice_cream VALUES (7, 'Fudge', 330, 1.70, 7);
 INSERT INTO ice_cream VALUES (8, 'Reeses', 375, 2.00, 8);
 INSERT INTO ice_cream VALUES (9, 'Butterfinger', 375, 2.00, 6);
 INSERT INTO ice_cream VALUES (10, 'Heath', 290, 2.00, 5);
-INSERT INTO ice_cream VALUES (11, 'Cappucino', 315, 2.00, 4);
+INSERT INTO ice_cream VALUES (11, 'Cappuccino', 315, 2.00, 4);
 INSERT INTO ice_cream VALUES (12, 'Coconut', 290, 1.70, 2);
 INSERT INTO ice_cream VALUES (13, 'Cheesecake', 325, 2.00, 6);
 INSERT INTO ice_cream VALUES (14, 'Banana', 290, 1.70, 7);
